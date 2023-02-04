@@ -10,6 +10,10 @@ To use it, you need to create a [config file](#config-file) which lists the fold
 As a result, it will create a new folder and copy all the randomly chosen files into it according to the config structure.
 It will also add a report, what files had been picked, where the originals are and where the copies are.
 
+## Demo
+
+![randospire demo GIF](./assets/randospire-demo.gif)
+
 ## Use it without installation
 
 * Prerequisite: Install [Node.js](https://nodejs.org/en/) (as a runtime)
