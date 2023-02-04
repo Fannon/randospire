@@ -1,6 +1,6 @@
 {
   "name": "randospire",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Randomly pick files to challenge you to create something with them.",
   "author": "Simon Heimler",
   "license": "MIT",
@@ -8,6 +8,11 @@
   "bin": {
     "randospire": "dist/cli.js"
   },
+  "files": [
+    "dist/",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "clean": "rm -rf ./dist/ && rm -rf ./tmp/",
     "build": "tsc --project ./tsconfig.json",

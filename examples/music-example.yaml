@@ -22,13 +22,6 @@ inputFolders:
   - C:\Sound Library\AUDIO Drum Loops
 
 ---
-name: 'U-He Hive 2 Patches'
-amount: 5
-inputFolders:
-  # %USERPROFILE% can be used to point to the user home directory
-  - '%USERPROFILE%\Documents\u-he\Hive.data\Presets\Hive'
-
----
 name: 'MIDI Drum Loops'
 amount: 3
 inputFolders:
@@ -37,3 +30,11 @@ inputFolders:
 fileExtensions:
   - 'mid'
   - 'midi'
+
+---
+name: 'U-He Hive 2 Patches'
+amount: 5
+inputFolders:
+  # %USERPROFILE% can be used to point to the user home directory
+  - '%USERPROFILE%\Documents\u-he\Hive.data\Presets\Hive'
+

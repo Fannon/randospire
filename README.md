@@ -16,10 +16,10 @@ It will also add a report, what files had been picked, where the originals are a
 
 ```bash
 # Execute it like following
-npx randospire examples/music-01.yaml
+npx randospire examples/music-example.yaml
 
-# Optionally: Provide target directly:
-npx randospire examples/music-01.yaml tmp
+# Optionally: Provide target directory:
+npx randospire examples/music-example.yaml ./tmp
 ```
 
 ## Use it offline with installation
@@ -31,7 +31,7 @@ npx randospire examples/music-01.yaml tmp
 npm i -g randospire
 
 # Now use it:
-randospire examples/music-01.yaml ./tmp
+randospire examples/music-example.yaml ./tmp
 ```
 
 ## Config File
@@ -39,10 +39,12 @@ randospire examples/music-01.yaml ./tmp
 The config file is a multi-document [YAML](https://yaml.org/) file.
 The interface is described in [src/config.ts](./src/config.ts), but how it works can be easily understood from [examples](./examples/).
 
-Here is one example file with comments explaining it: [./examples/music-01.yaml](./examples/music-01.yaml):
+It is probably easiest to copy an example and change it to your purposes.
+
+Here is one example file with comments explaining it: [./examples/music-example.yaml](./examples/music-example.yaml):
 
 ```yaml
-# Execute with npx randospire ./music-01.yaml
+# Execute with npx randospire ./music-example.yaml
 
 # Each --- indicates a new YAML document, or in our case, a new job
 ---
@@ -73,14 +75,4 @@ amount: 2
 inputFolders:
   # %USERPROFILE% can be used to point to the user home directory
   - '%USERPROFILE%\Documents\u-he\Hive.data\Presets\Hive'
-
----
-name: 'MIDI Drum Loops'
-amount: 3
-inputFolders:
-  - 'C:\Sound Library\MIDI Drum Loops 4x4'
-  - 'C:\Sound Library\MIDI Drum Loops'
-fileExtensions:
-  - 'mid'
-  - 'midi'
 ```
