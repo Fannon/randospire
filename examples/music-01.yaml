@@ -1,0 +1,31 @@
+# Execute with npx randospire ./music-01.yaml
+
+---
+name: 'Drum Hits'
+amount: 7
+inputFolders:
+  - C:\Sound Library\AUDIO Drum Hits
+  - C:\Sound Library\AUDIO Drum Kits'
+fileExtensions:
+  - 'wav'
+  - 'flac'
+  - 'mp3'
+---
+name: 'Drum Loops'
+amount: 2
+inputFolders:
+  - C:\Sound Library\AUDIO Drum Loops
+---
+name: 'U-He Hive 2 Patches'
+amount: 2
+inputFolders:
+  - C:\Users\Fannon\OneDrive\Musik\u-he\Hive.data\Presets\Hive
+---
+name: 'MIDI Drum Loops'
+amount: 3
+inputFolders:
+  - 'C:\Sound Library\MIDI Drum Loops 4x4'
+  - 'C:\Sound Library\MIDI Drum Loops'
+fileExtensions:
+  - 'mid'
+  - 'midi'

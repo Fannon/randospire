@@ -2,10 +2,15 @@
   "name": "randospire",
   "version": "0.1.0",
   "description": "Randomly pick files to challenge you to create something with it.",
-  "main": "index.js",
+  "main": "dist/cli.js",
+  "bin": {
+    "randospire": "dist/cli.js"
+  },
   "scripts": {
+    "clean": "rm -rf ./dist/ && rm -rf ./tmp/",
     "build": "tsc --project ./tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./dist/cli.js",
+    "test": "echo \"Error: no test specified\""
   },
   "author": "Simon Heimler",
   "license": "MIT",
