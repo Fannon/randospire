@@ -1,9 +1,11 @@
 # randospire
 
-A CLI that randomly picks files for you, so you can challenge yourself to create something with them.
+A CLI tool that randomly picks files for you, so you can challenge yourself to create something with them.
 
-It can be used for example, to pick random samples, MIDI files, presets for you. 
-Now use those randomly picked files to create something awesome out of it :)
+For example, you can use it to pick random samples, MIDI files, presets of different categories for you. But in principle, it works with all kind of files.
+
+> Sometimes external constraints and limitations are what inspire creativity most.
+> Use randospire to make the decisions for you and see what you can make out of it.
 
 To use it, you need to create a [config file](#config-file) which lists the folders and file extension to consider.
 
@@ -80,3 +82,7 @@ inputFolders:
   # %USERPROFILE% can be used to point to the user home directory
   - '%USERPROFILE%\Documents\u-he\Hive.data\Presets\Hive'
 ```
+
+## Tips & Tricks
+
+> With [Bitwig](https://www.bitwig.com/de/), copy over everything into the project directory, then you can work with the Browser - Files on the right sidebar. With some presets (like u-he), you can even drag the presets into a track and it will load the instrument + the chosen preset directly!
