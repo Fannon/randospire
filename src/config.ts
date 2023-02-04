@@ -19,12 +19,3 @@ export type Config = {
      */
     fileExtensions?: string[];
 }[]
-
-/**
- * Stores the results of the operation, so it is possible to understand what was done in retrospect
- */
-export type Report = {
-    config: Config[];
-    inputFiles: any;
-    outputFiles: any;
-}[]

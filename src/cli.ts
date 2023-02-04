@@ -2,6 +2,7 @@
 import { log } from './logger'
 import * as fs from 'fs-extra'
 import * as path from 'path'
+import * as os from 'os'
 import * as fg from 'fast-glob'
 import * as yaml from 'js-yaml'
 import { Config } from './config'
@@ -47,7 +48,10 @@ try {
       const startTime = Date.now();
       let filesToConsider: string[] = []
 
-      for (const dir of entry.inputFolders) {
+      for (let dir of entry.inputFolders) {
+
+        dir = dir.replace('%USERPROFILE%', os.homedir())
+
         let globPattern = '**/*'
         if (entry.fileExtensions && entry.fileExtensions.length > 0) {
           if (entry.fileExtensions.length === 1) {

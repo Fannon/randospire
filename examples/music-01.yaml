@@ -1,25 +1,33 @@
-# Execute with npx randospire ./music-01.yaml
-
+# Each --- indicates a new YAML document, or in our case, a new job
 ---
+# The name should be something meaningful to you. 
+# It also doubles as a folder name for the output, so make sure the names are unique and work as folder names 
 name: 'Drum Hits'
+# How many files to pick randomly
 amount: 7
+# A list of input folders where to look for
 inputFolders:
   - C:\Sound Library\AUDIO Drum Hits
   - C:\Sound Library\AUDIO Drum Kits'
+# Optional: Limit file extensions. If not given, all files are considered.
 fileExtensions:
   - 'wav'
   - 'flac'
   - 'mp3'
+
 ---
 name: 'Drum Loops'
 amount: 2
 inputFolders:
   - C:\Sound Library\AUDIO Drum Loops
+
 ---
 name: 'U-He Hive 2 Patches'
-amount: 2
+amount: 5
 inputFolders:
-  - C:\Users\Fannon\OneDrive\Musik\u-he\Hive.data\Presets\Hive
+  # %USERPROFILE% can be used to point to the user home directory
+  - '%USERPROFILE%\Documents\u-he\Hive.data\Presets\Hive'
+
 ---
 name: 'MIDI Drum Loops'
 amount: 3
