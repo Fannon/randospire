@@ -10,7 +10,7 @@ fileExtensions:
 
 ---
 name: Drum Loops
-amount: 2
+amount: 3
 inputFolders:
   - 'C:\Sound Library\AUDIO Drum Loops'
 fileExtensions:
@@ -39,6 +39,14 @@ fileExtensions:
   - 'midi'
 
 ---
+name: Bitwig Presets
+amount: 5
+inputFolders:
+  - '%USERPROFILE%\AppData\Local\Bitwig Studio\installed-packages\1.0\presets\'
+fileExtensions:
+  - 'bwpreset'
+
+---
 name: U-He Hive 2 Patches
 amount: 5
 inputFolders:
@@ -49,3 +57,9 @@ name: U-He Diva Patches
 amount: 3
 inputFolders:
   - '%USERPROFILE%\Documents\u-he\Diva.data\Presets\Diva'
+
+---
+name: U-He ZebraHZ Patches
+amount: 3
+inputFolders:
+  - '%USERPROFILE%\Documents\u-he\ZebraHZ.data\Presets\ZebraHZ'
