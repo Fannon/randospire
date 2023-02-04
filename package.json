@@ -1,9 +1,10 @@
 {
   "name": "randospire",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Randomly pick files to challenge you to create something with them.",
   "author": "Simon Heimler",
   "license": "MIT",
+  "homepage": "https://github.com/Fannon/randospire",
   "main": "dist/cli.js",
   "bin": {
     "randospire": "dist/cli.js"
