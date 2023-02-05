@@ -23,9 +23,10 @@ if (!configFilePath) {
   log.error(`No configuration file given as argument. Exiting.`)
   process.exit(1)
 }
+const overallStartTime = Date.now();
 const configFileName = path.parse(configFilePath).name
 const targetDir = process.argv[3] || process.cwd()
-const targetSubFolder = targetDir + '/' + new Date().toISOString().split('.')[0].replace('T', '_').split(':').join('-') + '_' + configFileName
+const targetSubFolder = path.normalize(targetDir + '/' + new Date().toISOString().split('.')[0].replace('T', '_').split(':').join('-') + '_' + configFileName)
 log.info(`Configuration file: ${process.argv[2]}`)
 log.info(`Target directory: ${targetSubFolder}`)
 log.info('-----------------------------------------------------------------')
@@ -44,7 +45,8 @@ try {
   if (Array.isArray(config)) {
     for (const entry of config) {
       log.info('-----------------------------------------------------------------')
-      log.info(`Processing: ${entry.name} and looking for ${entry.amount} random items.`)
+      log.info(`${entry.name} (select ${entry.amount})`)
+      log.info('-----------------------------------------------------------------')
       const startTime = Date.now();
       let filesToConsider: string[] = []
 
@@ -80,10 +82,11 @@ try {
         fs.ensureDirSync(entryTargetDir)
         pickedResults.forEach((el, index) => {
           const targetFileName = `${index.toString().padStart(3, '0')}_${path.parse(el).base}`
-          const targetFilePath = `${entryTargetDir}/${targetFileName}`;
+          const targetFilePath = path.normalize(`${entryTargetDir}/${targetFileName}`);
           report.outputFiles[entry.name].push(targetFilePath)
           fs.copyFileSync(el, targetFilePath)
-          log.info(`Copied chosen file:`, targetFilePath)
+          log.info(`Selected: ${el}`)
+          // log.debug(`--> Copied to: ${targetFilePath}`)
         })
 
       } catch (err) {
@@ -102,9 +105,13 @@ try {
     process.exit(1)
   }
 
-  const reportFilePath = `${targetSubFolder}/report.yaml`
-  log.info(`Written report: ${reportFilePath}`)
+  log.info('=================================================================')
+  const reportFilePath = path.normalize(`${targetSubFolder}/report.yaml`)
+  log.info(`Successfully finished in ${Date.now() - overallStartTime}ms.`)
+  log.info(`Output: ${targetSubFolder}`)
+  log.info(`Report: ${reportFilePath}`)
   fs.outputFileSync(reportFilePath, yaml.dump(report, { lineWidth: 1024}))
+  log.info('=================================================================')
 
 } catch (err) {
   log.error(`Could not read and parse config file: ${configFilePath}`)
@@ -113,7 +120,6 @@ try {
   process.exit(1)
 }
 
-log.info('=================================================================')
 
 /**
  * Unbiased random shuffle array algorithm

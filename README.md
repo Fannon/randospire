@@ -45,7 +45,7 @@ randospire examples/music-example.yaml ./tmp
 The config file is a multi-document [YAML](https://yaml.org/) file.
 The interface is described in [src/config.ts](./src/config.ts), but how it works can be easily understood from [examples](./examples/).
 
-It is probably easiest to copy an example and change it to your purposes.
+It is probably easiest to copy one of the [examples](./examples/) and adjust it to your purposes.
 
 Here is one example file with comments explaining it: [./examples/music-example.yaml](./examples/music-example.yaml):
 

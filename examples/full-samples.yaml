@@ -1,0 +1,66 @@
+---
+name: Drum Hits
+amount: 8
+inputFolders:
+  - 'C:\Sound Library\AUDIO Drum Hits'
+  - 'C:\Sound Library\AUDIO Drum Kits'
+fileExtensions:
+  - wav
+  - flac
+
+---
+name: Drum Loops
+amount: 4
+inputFolders:
+  - 'C:\Sound Library\AUDIO Drum Loops'
+fileExtensions:
+  - wav
+  - flac
+
+---
+name: Random Samples
+amount: 8
+inputFolders:
+  - '%USERPROFILE%\AppData\Local\Bitwig Studio\installed-packages\1.0\samples'
+  - 'C:\Sound Library\AUDIO Misc'
+  - 'C:\Sound Library Extended\AUDIO Sample Packs'
+  - 'C:\Sound Library Extended\Ableton Projects'
+fileExtensions:
+  - wav
+  - flac
+
+---
+name: MIDI Drum Loops
+amount: 4
+inputFolders:
+  - 'C:\Sound Library\MIDI Drum Loops 4x4'
+  - 'C:\Sound Library\MIDI Drum Loops'
+fileExtensions:
+  - 'mid'
+  - 'midi'
+
+---
+name: Bitwig Presets
+amount: 4
+inputFolders:
+  - '%USERPROFILE%\AppData\Local\Bitwig Studio\installed-packages\1.0\presets\'
+fileExtensions:
+  - 'bwpreset'
+
+---
+name: U-He Hive 2 Patches
+amount: 4
+inputFolders:
+  - '%USERPROFILE%\Documents\u-he\Hive.data\Presets\Hive'
+
+---
+name: U-He Diva Patches
+amount: 4
+inputFolders:
+  - '%USERPROFILE%\Documents\u-he\Diva.data\Presets\Diva'
+
+---
+name: U-He ZebraHZ Patches
+amount: 4
+inputFolders:
+  - '%USERPROFILE%\Documents\u-he\ZebraHZ.data\Presets\ZebraHZ'
