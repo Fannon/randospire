@@ -50,34 +50,31 @@ It is probably easiest to copy an example and change it to your purposes.
 Here is one example file with comments explaining it: [./examples/music-example.yaml](./examples/music-example.yaml):
 
 ```yaml
-# Execute with npx randospire ./music-example.yaml
-
 # Each --- indicates a new YAML document, or in our case, a new job
 ---
 # The name should be something meaningful to you. 
 # It also doubles as a folder name for the output, so make sure the names are unique and work as folder names 
-name: 'Drum Hits'
+name: Drum Hits
 # How many files to pick randomly
 amount: 7
 # A list of input folders where to look for
 inputFolders:
-  - C:\Sound Library\AUDIO Drum Hits
-  - C:\Sound Library\AUDIO Drum Kits'
+  - 'C:\Sound Library\AUDIO Drum Hits'
+  - 'C:\Sound Library\AUDIO Drum Kits'
 # Optional: Limit file extensions. If not given, all files are considered.
 fileExtensions:
-  - 'wav'
-  - 'flac'
-  - 'mp3'
+  - wav
+  - flac
 
 ---
-name: 'Drum Loops'
+name: Drum Loops
 amount: 2
 inputFolders:
-  - C:\Sound Library\AUDIO Drum Loops
+  - 'C:\Sound Library\AUDIO Drum Loops'
 
 ---
-name: 'U-He Hive 2 Patches'
-amount: 2
+name: U-He Hive 2 Patches
+amount: 5
 inputFolders:
   # %USERPROFILE% can be used to point to the user home directory
   - '%USERPROFILE%\Documents\u-he\Hive.data\Presets\Hive'
